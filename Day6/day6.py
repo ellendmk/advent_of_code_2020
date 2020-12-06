@@ -8,11 +8,13 @@ common_count = 0
 for i in contents:
     ans = []
     text = (i.split('\n'))
+    text = [k for k in text if k]
+    
     text_joined=''.join(text)
     items = set(text_joined)
     check = 0
     for k in items:
-        check=0
+        check = 0
         for n in text:
             if k in n:
                 check+=1
